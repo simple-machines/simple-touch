@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleTouchDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SimpleTouch Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6As-fP-hYY">
+                                <rect key="frame" x="226.5" y="28" width="147.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-df-xk6">
+                                <rect key="frame" x="220.5" y="91" width="159" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Test Hardware Support"/>
+                                <connections>
+                                    <action selector="testHardwareSupport" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLh-Pq-8fV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh6-8b-qlZ">
+                                <rect key="frame" x="218.5" y="131" width="163" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Test Evaluation Support"/>
+                                <connections>
+                                    <action selector="testEvaluationSupport" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnV-8u-53k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTB-JU-ylD">
+                                <rect key="frame" x="254" y="171" width="92" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Run Touch ID"/>
+                                <connections>
+                                    <action selector="runTouchID" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9s-sr-FNO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KTB-JU-ylD" firstAttribute="top" secondItem="qh6-8b-qlZ" secondAttribute="bottom" constant="10" id="2mf-FH-IMW"/>
+                            <constraint firstItem="TK7-df-xk6" firstAttribute="centerX" secondItem="6As-fP-hYY" secondAttribute="centerX" id="AHD-6M-jRV"/>
+                            <constraint firstItem="KTB-JU-ylD" firstAttribute="centerX" secondItem="qh6-8b-qlZ" secondAttribute="centerX" id="EJr-mU-Wot"/>
+                            <constraint firstItem="qh6-8b-qlZ" firstAttribute="top" secondItem="TK7-df-xk6" secondAttribute="bottom" constant="10" id="HEf-aP-fBo"/>
+                            <constraint firstItem="6As-fP-hYY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="JwG-kq-fqY"/>
+                            <constraint firstItem="TK7-df-xk6" firstAttribute="top" secondItem="6As-fP-hYY" secondAttribute="bottom" constant="42" id="MfQ-qZ-Fhu"/>
+                            <constraint firstItem="qh6-8b-qlZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJU-kl-ILJ"/>
+                            <constraint firstItem="6As-fP-hYY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gTb-I6-NTb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
