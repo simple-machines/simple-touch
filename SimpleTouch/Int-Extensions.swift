@@ -9,7 +9,7 @@
 import Foundation
 
 extension Int {
-  internal func toEnum<Enum: RawRepresentable where Enum.RawValue == Int>() -> Enum? {
+  internal func toEnum<Enum: RawRepresentable>() -> Enum? where Enum.RawValue == Int {
     return Enum(rawValue: self)
   }
 }
