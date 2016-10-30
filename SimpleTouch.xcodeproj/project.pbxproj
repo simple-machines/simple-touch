@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		07D7BD371BD44D5F008E4BF3 /* SimpleTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D7BD361BD44D5F008E4BF3 /* SimpleTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07D7BD3E1BD44D5F008E4BF3 /* SimpleTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D7BD331BD44D5F008E4BF3 /* SimpleTouch.framework */; settings = {ASSET_TAGS = (); }; };
+		07D7BD3E1BD44D5F008E4BF3 /* SimpleTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D7BD331BD44D5F008E4BF3 /* SimpleTouch.framework */; };
 		07D7BD431BD44D5F008E4BF3 /* SimpleTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD421BD44D5F008E4BF3 /* SimpleTouchTests.swift */; };
-		07D7BD4E1BD44E83008E4BF3 /* SimpleTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD4D1BD44E83008E4BF3 /* SimpleTouch.swift */; settings = {ASSET_TAGS = (); }; };
-		07D7BD501BD452BF008E4BF3 /* TouchIDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD4F1BD452BF008E4BF3 /* TouchIDError.swift */; settings = {ASSET_TAGS = (); }; };
-		07D7BD521BD452E5008E4BF3 /* Int-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD511BD452E5008E4BF3 /* Int-Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		07D7BD4E1BD44E83008E4BF3 /* SimpleTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD4D1BD44E83008E4BF3 /* SimpleTouch.swift */; };
+		07D7BD501BD452BF008E4BF3 /* TouchIDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD4F1BD452BF008E4BF3 /* TouchIDError.swift */; };
+		07D7BD521BD452E5008E4BF3 /* Int-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD511BD452E5008E4BF3 /* Int-Extensions.swift */; };
 		07D7BD5A1BD45635008E4BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD591BD45635008E4BF3 /* AppDelegate.swift */; };
 		07D7BD5C1BD45635008E4BF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD5B1BD45635008E4BF3 /* ViewController.swift */; };
 		07D7BD5F1BD45635008E4BF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D7BD5D1BD45635008E4BF3 /* Main.storyboard */; };
 		07D7BD611BD45635008E4BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D7BD601BD45635008E4BF3 /* Assets.xcassets */; };
 		07D7BD641BD45635008E4BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D7BD621BD45635008E4BF3 /* LaunchScreen.storyboard */; };
 		07D7BD6B1BD45819008E4BF3 /* SimpleTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D7BD331BD44D5F008E4BF3 /* SimpleTouch.framework */; };
-		07D7BD6D1BD4737F008E4BF3 /* TouchIDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD6C1BD4737F008E4BF3 /* TouchIDResponse.swift */; settings = {ASSET_TAGS = (); }; };
+		07D7BD6D1BD4737F008E4BF3 /* TouchIDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7BD6C1BD4737F008E4BF3 /* TouchIDResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,14 +216,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Simple Machines";
 				TargetAttributes = {
 					07D7BD321BD44D5F008E4BF3 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0810;
 					};
 					07D7BD3C1BD44D5F008E4BF3 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0810;
 					};
 					07D7BD561BD45635008E4BF3 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -354,8 +356,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -402,8 +406,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -423,6 +429,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -434,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -446,6 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -453,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -464,6 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.simplemachines.SimpleTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -474,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.simplemachines.SimpleTouchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -484,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.simplemachines.SimpleTouchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -495,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.simplemachines.SimpleTouchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -506,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.simplemachines.SimpleTouchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -528,6 +543,7 @@
 				07D7BD491BD44D5F008E4BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07D7BD4A1BD44D5F008E4BF3 /* Build configuration list for PBXNativeTarget "SimpleTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +552,7 @@
 				07D7BD4C1BD44D5F008E4BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07D7BD661BD45635008E4BF3 /* Build configuration list for PBXNativeTarget "SimpleTouchDemo" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +561,7 @@
 				07D7BD681BD45635008E4BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
