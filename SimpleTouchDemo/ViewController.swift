@@ -17,7 +17,7 @@ extension ViewController {
   @IBAction func testHardwareSupport() {
     let message: String
     switch SimpleTouch.hardwareSupportsTouchID {
-    case .Success:
+    case .success:
       message = "Hardware supports Touch ID"
     default:
       message = "Hardware does not support Touch ID"
@@ -27,9 +27,9 @@ extension ViewController {
   
   @IBAction func testEvaluationSupport() {
     switch SimpleTouch.isTouchIDEnabled {
-    case .Success:
+    case .success:
       showAlert("Can evaluate Touch ID")
-    case .Error(let error):
+    case .error(let error):
       displayErrorMessage(error)
     }
   }
@@ -37,9 +37,9 @@ extension ViewController {
   @IBAction func runTouchID() {
     let callback: TouchIDPresenterCallback = { response in
       switch response {
-      case .Success:
+      case .success:
         self.showAlert("Touch ID evaluated successfully")
-      case .Error(let error):
+      case .error(let error):
         self.displayErrorMessage(error)
       }
     }
@@ -49,38 +49,38 @@ extension ViewController {
 
 // MARK: Helpers
 extension ViewController {
-  func showAlert(message: String) {
-    let alertVC = UIAlertController(title: "Result", message: message, preferredStyle: .Alert)
-    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+  func showAlert(_ message: String) {
+    let alertVC = UIAlertController(title: "Result", message: message, preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
     alertVC.addAction(defaultAction)
-    self.presentViewController(alertVC, animated: true, completion: nil)
+    self.present(alertVC, animated: true, completion: nil)
   }
   
-  func displayErrorMessage(error: TouchIDError) {
+  func displayErrorMessage(_ error: TouchIDError) {
     switch error {
-    case .AppCancel:
+    case .appCancel:
       showAlert("App cancelled authentication")
-    case .AuthenticationFailed:
+    case .authenticationFailed:
       showAlert("Authentication failed")
-    case .InvalidContext:
+    case .invalidContext:
       showAlert("Invalid authentication context")
-    case .PasscodeNotSet:
+    case .passcodeNotSet:
       showAlert("Users passcode not set")
-    case .SystemCancel:
+    case .systemCancel:
       showAlert("System cancelled authetication")
-    case .TouchIDLockout:
+    case .touchIDLockout:
       showAlert("User is locked out of Touch ID")
-    case .TouchIDNotAvailable:
+    case .touchIDNotAvailable:
       showAlert("Touch ID is not available on this device")
-    case .TouchIDNotEnrolled:
+    case .touchIDNotEnrolled:
       showAlert("User has not enrolled for Touch ID")
-    case .UndeterminedState:
+    case .undeterminedState:
       showAlert("Undetermined error. If you can get this message to display I'd love to know how.")
-    case .UnknownError(let error):
+    case .unknownError(let error):
       showAlert("Unknown error. If you can get this message to display I'd love to know how. Error description: \(error.localizedDescription)")
-    case .UserCancel:
+    case .userCancel:
       showAlert("User cancelled authentication")
-    case .UserFallback:
+    case .userFallback:
       showAlert("User opted for fallback authetication")
     }
   }

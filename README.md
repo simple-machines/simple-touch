@@ -40,10 +40,10 @@ Then, check for Touch ID support:
 
 ```
 switch SimpleTouch.isTouchIDEnabled {
-case .Success:
+case .success:
   // All is good. Can use Touch ID for authentication
   break
-case .Error(let error):
+case .error(let error):
   // TouchID cannot be used. Interrogate error to see why
   break
 }
@@ -53,10 +53,10 @@ Finally, attempt to authenticate with Touch ID:
 ```
 SimpleTouch.presentTouchID("Testing Touch ID", fallbackTitle: "Fallback Method") { response in
   switch response {
-  case .Success:
+  case .success:
     // Successful authentication
     break
-  case .Error(let error):
+  case .error(let error):
     // Authentication failed. Interrogate error to see why
     break
   }

@@ -14,37 +14,37 @@ public struct SimpleTouch {
 
   public static var hardwareSupportsTouchID: TouchIDResponse {
     let response = evaluateTouchIDPolicy
-    guard response != TouchIDResponse.Error(.TouchIDNotAvailable) else {
+    guard response != TouchIDResponse.error(.touchIDNotAvailable) else {
       return response
     }
-    return .Success
+    return .success
   }
   
   public static var isTouchIDEnabled: TouchIDResponse {
     return evaluateTouchIDPolicy
   }
   
-  private static var evaluateTouchIDPolicy: TouchIDResponse {
+  fileprivate static var evaluateTouchIDPolicy: TouchIDResponse {
     let context = LAContext()
     var error: NSError?
-    guard context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) else {
-      return TouchIDResponse.Error(TouchIDError.createError(error))
+    guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+      return TouchIDResponse.error(TouchIDError.createError(error))
     }
-    return TouchIDResponse.Success
+    return TouchIDResponse.success
   }
   
-  public static func presentTouchID(reason: String, fallbackTitle: String, callback: TouchIDPresenterCallback) {
+  public static func presentTouchID(_ reason: String, fallbackTitle: String, callback: @escaping TouchIDPresenterCallback) {
     let context = LAContext()
     context.localizedFallbackTitle = fallbackTitle
-    context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { _, error in
+    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { _, error in
       guard error == nil else {
-        dispatch_async(dispatch_get_main_queue(), {
-          callback(.Error(TouchIDError.createError(error)))
+        DispatchQueue.main.async(execute: {
+          callback(.error(TouchIDError.createError(error as NSError?)))
         })
         return
       }
-      dispatch_async(dispatch_get_main_queue(), {
-        callback(.Success)
+      DispatchQueue.main.async(execute: {
+        callback(.success)
       })
     }
   }
